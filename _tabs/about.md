@@ -12,7 +12,7 @@ order: 4
 
 ---
 
-Welcome to my corner of the web! I’m a **passionate cybersecurity professional** specializing in:
+Welcome to my corner of the web! I’m a **Passionate CyberSecurity Professional** specializing in:
 
 - **Penetration Testing**
 - **Network Security**
