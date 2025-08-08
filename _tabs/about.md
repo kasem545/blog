@@ -20,7 +20,7 @@ Welcome to my corner of the web! I’m a **passionate cybersecurity professional
 - **Red Team Operations**
 - **Black Box Testing**
 
-With certifications like **CEH Master**, **eJPT**, **PNPT**, and **eWPT**, I bring hands-on experience to the table, helping organizations identify and patch vulnerabilities before malicious actors can exploit them.
+With certifications like **eCPPT**, **CEH Master**, **eJPT**, **PNPT**, and **eWPT**, I bring hands-on experience to the table, helping organizations identify and patch vulnerabilities before malicious actors can exploit them.
 
 ---
 
