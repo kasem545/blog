@@ -8,7 +8,7 @@ order: 4
 
 **Cybersecurity Enthusiast | Penetration Tester | Network & Web Application Security Specialist**  
 
-**Certified Ethical Hacker Master (CEH Master) | eJPT | PNPT | eWPT**
+**Certified Ethical Hacker Master (CEH Master) | eCPPT | eJPT | PNPT | eWPT**
 
 ---
 
