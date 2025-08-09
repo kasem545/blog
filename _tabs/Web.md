@@ -1,5 +1,5 @@
 ---
-title: My Site
+title: back
 # optional: change order to position it among other tabs
 order: 8
 icon: fa-solid fa-globe
