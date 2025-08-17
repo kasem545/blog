@@ -1,6 +1,5 @@
 ---
 title: 'TJ Null List'
-author: kasemsh
 categories: [HackTheBox]
 tags: [hackthebox, HTB]
 render_with_liquid: false
