@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Billing"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, command injection, sudo, fail2ban]
 render_with_liquid: false

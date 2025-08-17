@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: DX2: Hell's Kitchen"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, javascript, sql injection, websocket, command injection, nfs, sudo]
 render_with_liquid: false

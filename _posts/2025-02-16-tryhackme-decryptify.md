@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Decryptify"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, js, javascript, crypto, cryptography, fuzzing, php, insecure randomness, padding oracle attack, rce]
 render_with_liquid: false

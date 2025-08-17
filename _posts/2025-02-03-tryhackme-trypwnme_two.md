@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: TryPwnMe Two"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [python, ghidra, pwn, gdb, binary exploitation, shellcode, format string attack, heap, rop]
 render_with_liquid: false

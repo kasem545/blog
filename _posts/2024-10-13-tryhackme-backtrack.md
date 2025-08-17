@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Backtrack"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, path traversal, file disclosure, tomcat, sudo, insecure file upload, php, tty]
 render_with_liquid: false

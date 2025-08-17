@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: CERTain Doom"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, java, insecure deserialization, ysoserial, pivoting, weak credentials, api, jwt]
 render_with_liquid: false

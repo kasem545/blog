@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: New York Flankees'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, padding oracle, docker]
 render_with_liquid: false

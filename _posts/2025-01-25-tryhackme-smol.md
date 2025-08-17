@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Smol"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, wordpress, wpscan, file disclosure, rce, backdoor, php, mysql, john, hash, pam, zip]
 render_with_liquid: false

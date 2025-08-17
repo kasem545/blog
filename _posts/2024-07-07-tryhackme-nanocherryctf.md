@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: NanoCherryCTF'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, fuzz, vhost, ffuf, hydra, brute-force, cron, sstv, steganography]
 render_with_liquid: false

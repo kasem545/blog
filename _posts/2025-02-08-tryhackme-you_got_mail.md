@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: You Got Mail"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, brute-force, hydra, cewl, phishing, post-exploitation]
 render_with_liquid: false

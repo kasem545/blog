@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Extracted"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [pcap, wireshark, keepass, xor, base64, powershell, tshark]
 render_with_liquid: false

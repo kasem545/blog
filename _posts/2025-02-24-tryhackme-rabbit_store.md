@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Rabbit Store"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, js, jwt, fuzzing, mass assignment, api, ssrf, ssti, rabbitmq, erlang]
 render_with_liquid: false

@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Hack Smarter Security'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, file disclosure, ssh, windows, service]
 render_with_liquid: false

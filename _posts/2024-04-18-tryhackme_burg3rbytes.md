@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Burg3r Bytes'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, race condition, ssti,  python]
 render_with_liquid: false

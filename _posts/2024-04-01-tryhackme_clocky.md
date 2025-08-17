@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Clocky'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, ffuf, python, flask, ssrf, mysql, hashcat]
 render_with_liquid: false

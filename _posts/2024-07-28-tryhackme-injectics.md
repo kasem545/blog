@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Injectics"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, javascript, sql injection, ssti, rce]
 render_with_liquid: false

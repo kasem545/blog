@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Soupedecode 01"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [windows, nxc, netexec, ad, active directory, impacket, password spraying, kerberoast, smb, hash spraying, pass-the-hash]
 render_with_liquid: false

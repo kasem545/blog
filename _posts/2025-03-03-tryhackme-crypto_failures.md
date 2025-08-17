@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Crypto Failures"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, php, crypto, hashing, python]
 render_with_liquid: false

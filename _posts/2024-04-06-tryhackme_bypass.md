@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Bypass'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, nc, curl, ping, rce]
 render_with_liquid: false

@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Ledger"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [windows, nxc, netexec, ldap, active directory, ad, ad cs, esc1, impacket, certipy]
 render_with_liquid: false

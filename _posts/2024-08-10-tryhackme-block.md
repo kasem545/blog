@@ -1,6 +1,6 @@
 ---
 title: "TryHackMe: Block"
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [pcap, wireshark, lsass, pypykatz, python, smb]
 render_with_liquid: false

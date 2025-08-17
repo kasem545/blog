@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe: Dodge'
-author: jaxafed
+author: kasemsh
 categories: [TryHackMe]
 tags: [web, vhost, subdomain, ufw, firewall, ftp, sudo, apt]
 render_with_liquid: false
