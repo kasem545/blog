@@ -1,0 +1,8 @@
+/* Import the theme base */
+@import 'jekyll-theme-chirpy';
+
+/* Apply background to the whole site */
+body {
+  background: url('/assets/img/background.jpg') no-repeat center center fixed;
+  background-size: cover; /* make it cover the whole screen */
+}
