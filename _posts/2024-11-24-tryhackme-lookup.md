@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Lookup"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, vhost, brute-force, command injection, suid, path hijacking, sudo, arbitary file read]
 render_with_liquid: false

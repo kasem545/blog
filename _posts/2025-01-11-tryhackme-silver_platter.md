@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Silver Platter"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, brute-force, ffuf, idor, ssh, adm, log]
 render_with_liquid: false

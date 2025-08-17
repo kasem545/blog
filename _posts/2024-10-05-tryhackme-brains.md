@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Brains"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, authentication bypass, rce, splunk]
 render_with_liquid: false

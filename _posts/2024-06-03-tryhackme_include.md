@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: Include'
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, api, prototype pollution, ssrf, lfi, log poisoning]
 render_with_liquid: false

@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Robots"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, xss, php, rfi, docker, pivoting, mysql, python, curl, sudo, apache2]
 render_with_liquid: false

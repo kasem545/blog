@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Pyrat"
-author: kasemsh
 categories: [TryHackMe]
 tags: [python, git, brute-force]
 render_with_liquid: false

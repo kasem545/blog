@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: TryPwnMe One"
-author: kasemsh
 categories: [TryHackMe]
 tags: [python, pwn, gdb, binary exploitation, buffer overflow, rop, ret2win, ret2libc, format string attack]
 render_with_liquid: false

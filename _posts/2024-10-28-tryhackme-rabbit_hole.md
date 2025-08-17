@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Rabbit Hole"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, sql injection, mysql, python]
 render_with_liquid: false

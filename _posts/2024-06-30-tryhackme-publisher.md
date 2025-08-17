@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: Publisher'
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, fuzz, ffuf, php, rce, suid, apparmor]
 render_with_liquid: false

@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: Burg3r Bytes'
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, race condition, ssti,  python]
 render_with_liquid: false

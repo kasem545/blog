@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Mouse Trap"
-author: kasemsh
 categories: [TryHackMe]
 tags: [windows, rce, unquoted service path, persistence, sysmon]
 render_with_liquid: false

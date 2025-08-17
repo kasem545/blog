@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: The London Bridge"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, ffuf, fuzz, ssrf, kernel exploit, firefox]
 render_with_liquid: false

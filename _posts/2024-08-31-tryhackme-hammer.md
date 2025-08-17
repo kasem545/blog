@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Hammer"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, ffuf, python, rate-limit, brute-force, authentication bypass, jwt, remote code execution]
 render_with_liquid: false

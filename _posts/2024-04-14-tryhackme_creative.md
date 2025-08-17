@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: Creative'
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, ffuf, fuzzing, vhost, ssrf, ssh, john, sudo, ld_preload]
 render_with_liquid: false

@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: AoC 2024 Side Quest Four"
-author: kasemsh
 categories: [TryHackMe]
 date: 2025-01-01 00:00:04 +0000
 tags: [web, sqli, smb, brute-forcing, phishing, bloodhound, active directory, shadow credentials, iis]

@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Lo-Fi"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, lfi, log poisoning, rce]
 render_with_liquid: false

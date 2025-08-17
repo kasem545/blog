@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: El Bandito'
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, request smuggling, websocket, proxy]
 render_with_liquid: false

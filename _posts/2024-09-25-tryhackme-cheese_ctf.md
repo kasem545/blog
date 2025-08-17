@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Cheese CTF"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, portspoofing, sqli, lfi, rce, ssh, service, timer, suid, sudo]
 render_with_liquid: false

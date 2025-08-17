@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: Whats Your Name?'
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, js, xss, csrf]
 render_with_liquid: false

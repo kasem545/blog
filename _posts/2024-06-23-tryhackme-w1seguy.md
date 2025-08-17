@@ -1,6 +1,5 @@
 ---
 title: 'TryHackMe: W1seGuy'
-author: kasemsh
 categories: [TryHackMe]
 tags: [nc, xor, python]
 render_with_liquid: false

@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Billing"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, command injection, sudo, fail2ban]
 render_with_liquid: false

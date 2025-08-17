@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: SeeTwo"
-author: kasemsh
 categories: [TryHackMe]
 tags: [pcap, wireshark, http, tcp, c2, python, xor, base64]
 render_with_liquid: false

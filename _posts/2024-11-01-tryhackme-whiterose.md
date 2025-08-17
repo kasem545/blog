@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Whiterose"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, vhost, node, js, ejs, ssti, sudoedit]
 render_with_liquid: false

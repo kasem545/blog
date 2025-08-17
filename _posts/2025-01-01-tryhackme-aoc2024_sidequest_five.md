@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: AoC 2024 Side Quest Five"
-author: kasemsh
 categories: [TryHackMe]
 date: 2025-01-01 00:00:05 +0000
 tags: [web, frida, game hacking, ghidra, dns, xss, sandbox, rce, chisel, docker, npm, node, git, jwt, sudo]

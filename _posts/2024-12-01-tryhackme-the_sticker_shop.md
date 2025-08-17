@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: The Sticker Shop"
-author: kasemsh
 categories: [TryHackMe]
 tags: [web, xss, js]
 render_with_liquid: false

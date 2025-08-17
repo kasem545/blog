@@ -1,6 +1,5 @@
 ---
 title: "TryHackMe: Hack Back"
-author: kasemsh
 categories: [TryHackMe]
 tags: [reverse engineering, ghidra, phishing, nc, blockchain, smart contract]
 render_with_liquid: false
