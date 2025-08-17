@@ -6,3 +6,14 @@ body {
   background: url('/assets/img/background.jpg') no-repeat center center fixed;
   background-size: cover; /* make it cover the whole screen */
 }
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: -1;
+}
