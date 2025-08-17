@@ -212,17 +212,6 @@ nmap -p- --min-rate 1000 -T4 -A example.com -oA fullscan
 masscan -p0-65535 example.com --rate 100000 -oG masscan-results.txt
 ```
 
-# Bug Bounty Methodologies
-
-- [Advanced Recon Methodology](#advanced-recon-methodology)
-- [Gather Assets Through API](#gather-assets-through-api)
-- [SSTI Payloads](#ssti-payloads)
-- [CRLF Injection](#crlf-injection)
-- [SQL Injection Methodology](#sql-injection-methodology)
-- [XSS WAF Bypass Methodology](#xss-waf-bypass-methodology)
-- [SQL Injection XOR WAF Bypass](#sql-injection-xor-waf-bypass-methodology)
-- [Advanced Google Dorks](#advanced-google-dorks-methodology)
-
 # Parameter Discovery
 
 ## Arjun Passive
@@ -288,8 +277,18 @@ ffuf -request xss -request-proto https
 ```
 
 
+# Advanced Bug Bounty Methodologies
 
-# Advanced Methodologies
+- [Advanced Recon Methodology](#advanced-recon-methodology)
+- [Gather Assets Through API](#gather-assets-through-api)
+- [SSTI Payloads](#ssti-payloads)
+- [CRLF Injection](#crlf-injection)
+- [SQL Injection Methodology](#sql-injection-methodology)
+- [XSS WAF Bypass Methodology](#xss-waf-bypass-methodology)
+- [SQL Injection XOR WAF Bypass](#sql-injection-xor-waf-bypass-methodology)
+- [Advanced Google Dorks](#advanced-google-dorks-methodology)
+
+
 
 ## Advanced Google Dorks Methodology
 
