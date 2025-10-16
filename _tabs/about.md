@@ -29,7 +29,12 @@ With certifications like **eCPPT**, **CEH Master**, **eJPT**, **PNPT**, and **eW
 
 | **Certificate Name** | **Certificate Description** | **Certificate Image** |
 | -------------------- | --------------------------- | --------------------- |
-| **PT1** | Jr Penetration Tester | ![PT1]
+| **CRTA** |    Certified Red Team Analyst | ![CRTA](/assets/img/post_img/Certificates/CRTA.png)|
+| **HackTheBox DANTE**|    HackTheBox ProLab | ![DANTE](/assets/img/post_img/Certificates/Dante.png)|
+| **HackTheBox P.O.O** |   HackTheBox ProLab | ![P.O.O](/assets/img/post_img/Certificates/P.O.O.png)|
+| **MCRTA** | Multi Cloud Red Teaming Analyst | ![MCRTA](/assets/img/post_img/Certificates/MCRTA.png)|
+| **PT1** | Jr Penetration Tester | ![PT1](/assets/img/post_img/Certificates/pt1.png)|
+| **MalDev Academy** |    Malware Development Course |![MalDev](/assets/img/post_img/Certificates/maldev.png) |
 | **eCPPT** | Certified Professional Penetration Tester | ![eCPPT](/assets/img/post_img/Certificates/ecppt.png) |
 | **Linux Essentials** | Certified in Linux fundamentals, essential for system administration and scripting. | ![Linux Essentials](/assets/img/post_img/Certificates/lpi.png) |
 | **Python Certified Entry-Level Programmer (PCEP)** | Certified in Python programming basics, emphasizing logic building and problem-solving. | ![PCEP](/assets/img/post_img/Certificates/pcep.png) |
@@ -37,6 +42,7 @@ With certifications like **eCPPT**, **CEH Master**, **eJPT**, **PNPT**, and **eW
 | **Certified Ethical Hacker (CEH)** | Credentialed as a CEH, showcasing skills in identifying vulnerabilities and securing systems. | ![CEH](/assets/img/post_img/Certificates/ceh.png) |
 | **Practical Network Penetration Tester (PNPT)** | Demonstrates proficiency in advanced penetration testing and reporting methodologies. | ![PNPT](/assets/img/post_img/Certificates/pnpt.png) |
 | **eLearnSecurity Web Application Penetration Tester (eWPT)** | Proficient in identifying and exploiting vulnerabilities in web applications. | ![eWPT](/assets/img/post_img/Certificates/ewpt.png) |
+| **HackTheBox Solar** |    HackTheBox ProLab | ![SOLAR](/assets/img/post_img/Certificates/solar.png) |
 | **HackTheBox FullHouse ProLab** | Step into the HTBCasino, entrusted with ensuring the privacy and security of its players. Your mission is to uncover vulnerabilities in new and legacy components, gain a foothold on the internal network, escalate privileges, and compromise the entire infrastructure—all while collecting flags along the way. | ![HTB FullHouse](/assets/img/post_img/Certificates/htb-fh.png) |
 
 ---
