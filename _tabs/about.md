@@ -29,6 +29,7 @@ With certifications like **eCPPT**, **CEH Master**, **eJPT**, **PNPT**, and **eW
 
 | **Certificate Name** | **Certificate Description** | **Certificate Image** |
 | -------------------- | --------------------------- | --------------------- |
+| **PT1** | Jr Penetration Tester | ![PT1]
 | **eCPPT** | Certified Professional Penetration Tester | ![eCPPT](/assets/img/post_img/Certificates/ecppt.png) |
 | **Linux Essentials** | Certified in Linux fundamentals, essential for system administration and scripting. | ![Linux Essentials](/assets/img/post_img/Certificates/lpi.png) |
 | **Python Certified Entry-Level Programmer (PCEP)** | Certified in Python programming basics, emphasizing logic building and problem-solving. | ![PCEP](/assets/img/post_img/Certificates/pcep.png) |
