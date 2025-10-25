@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, authentication bypass, rce, splunk]
 render_with_liquid: false
-media_subpath: /images/tryhackme_brains/
+media_subpath: /blog/images/tryhackme_brains/
 image:
   path: room_image.webp
 ---

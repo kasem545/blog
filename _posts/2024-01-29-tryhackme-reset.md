@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [smb, ntlm_theft, bloodhound, windows, active directory, domain, constrained delegation]
 render_with_liquid: false
-media_subpath: /images/tryhackme_reset/
+media_subpath: /blog/images/tryhackme_reset/
 image:
   path: room_image.webp
 ---

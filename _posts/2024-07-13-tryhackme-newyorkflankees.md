@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, padding oracle, docker]
 render_with_liquid: false
-media_subpath: /images/tryhackme_newyorkflankees/
+media_subpath: /blog/images/tryhackme_newyorkflankees/
 image:
   path: room_image.webp
 ---

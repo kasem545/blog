@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, file disclosure, gdb, suid, sudo]
 render_with_liquid: false
-media_subpath: /images/tryhackme_airplane/
+media_subpath: /blog/images/tryhackme_airplane/
 image:
   path: room_image.webp
 ---

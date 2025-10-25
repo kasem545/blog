@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, php, crypto, hashing, python]
 render_with_liquid: false
-media_subpath: /images/tryhackme_crypto_failures/
+media_subpath: /blog/images/tryhackme_crypto_failures/
 image:
   path: room_image.webp
 ---

@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, js, xss, csrf]
 render_with_liquid: false
-media_subpath: /images/tryhackme_whats_your_name/
+media_subpath: /blog/images/tryhackme_whats_your_name/
 image:
   path: room_image.webp
 ---

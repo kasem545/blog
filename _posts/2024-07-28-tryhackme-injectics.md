@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, javascript, sql injection, ssti, rce]
 render_with_liquid: false
-media_subpath: /images/tryhackme_injectics/
+media_subpath: /blog/images/tryhackme_injectics/
 image:
   path: room_image.webp
 ---

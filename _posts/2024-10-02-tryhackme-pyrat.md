@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [python, git, brute-force]
 render_with_liquid: false
-media_subpath: /images/tryhackme_pyrat/
+media_subpath: /blog/images/tryhackme_pyrat/
 image:
   path: room_image.webp
 ---

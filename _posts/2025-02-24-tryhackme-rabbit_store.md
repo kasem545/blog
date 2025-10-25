@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, js, jwt, fuzzing, mass assignment, api, ssrf, ssti, rabbitmq, erlang]
 render_with_liquid: false
-media_subpath: /images/tryhackme_rabbit_store/
+media_subpath: /blog/images/tryhackme_rabbit_store/
 image:
   path: room_image.webp
 ---

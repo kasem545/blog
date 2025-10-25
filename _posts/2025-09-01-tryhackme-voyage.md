@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [linux, web, joomla, cms, ssh, docker, container, port forwarding, insecure deserialization, container escape, sys_module, rce]
 render_with_liquid: false
-media_subpath: /images/tryhackme_voyage/
+media_subpath: /blog/images/tryhackme_voyage/
 image:
   path: room_image.webp
 ---

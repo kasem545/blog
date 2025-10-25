@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, sqli, sqlmap, lfi, php, filters chain, ld_preload, docker, mysql]
 render_with_liquid: false
-media_subpath: /images/tryhackme_moebius/
+media_subpath: /blog/images/tryhackme_moebius/
 image:
   path: room_image.webp
 ---

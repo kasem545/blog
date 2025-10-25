@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [linux, web, ssrf, file disclosure, gopher, next.js, php, cookie manipulation]
 render_with_liquid: false
-media_subpath: /images/tryhackme_extract/
+media_subpath: /blog/images/tryhackme_extract/
 image:
   path: room_image.webp
 ---

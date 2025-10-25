@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, vhost, node, js, ejs, ssti, sudoedit]
 render_with_liquid: false
-media_subpath: /images/tryhackme_whiterose/
+media_subpath: /blog/images/tryhackme_whiterose/
 image:
   path: room_image.webp
 ---

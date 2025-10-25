@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [pcap, wireshark, lsass, pypykatz, python, smb]
 render_with_liquid: false
-media_subpath: /images/tryhackme_block/
+media_subpath: /blog/images/tryhackme_block/
 image:
   path: room_image.webp
 ---

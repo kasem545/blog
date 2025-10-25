@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, php, sqli, ssh, cron, command injection]
 render_with_liquid: false
-media_subpath: /images/tryhackme_kitty/
+media_subpath: /blog/images/tryhackme_kitty/
 image:
   path: room_image.webp
 ---

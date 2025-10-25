@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, js, javascript, crypto, cryptography, fuzzing, php, insecure randomness, padding oracle attack, rce]
 render_with_liquid: false
-media_subpath: /images/tryhackme_decryptify/
+media_subpath: /blog/images/tryhackme_decryptify/
 image:
   path: room_image.webp
 ---
