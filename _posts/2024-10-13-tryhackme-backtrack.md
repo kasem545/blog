@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, path traversal, file disclosure, tomcat, sudo, insecure file upload, php, tty]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_backtrack/
+media_subpath: /images/tryhackme_backtrack/
 image:
   path: room_image.webp
 ---

@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, sql injection, mysql, python]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_rabbit_hole/
+media_subpath: /images/tryhackme_rabbit_hole/
 image:
   path: room_image.webp
 ---

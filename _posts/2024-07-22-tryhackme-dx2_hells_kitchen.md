@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, javascript, sql injection, websocket, command injection, nfs, sudo]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_dx2_hells_kitchen/
+media_subpath: /images/tryhackme_dx2_hells_kitchen/
 image:
   path: room_image.webp
 ---

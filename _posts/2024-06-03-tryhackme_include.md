@@ -3,7 +3,7 @@ title: 'TryHackMe: Include'
 categories: [TryHackMe]
 tags: [web, api, prototype pollution, ssrf, lfi, log poisoning]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_include/
+media_subpath: /images/tryhackme_include/
 image:
   path: room_image.webp
 ---

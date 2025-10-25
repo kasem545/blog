@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [pcap, wireshark, keepass, xor, base64, powershell, tshark]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_extracted/
+media_subpath: /images/tryhackme_extracted/
 image:
   path: room_image.webp
 ---

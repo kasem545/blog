@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, ffuf, python, flask, ssrf, mysql, hashcat]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_clocky/
+media_subpath: /images/tryhackme_clocky/
 image:
   path: room_image.webp
 ---

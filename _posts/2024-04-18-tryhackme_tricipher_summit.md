@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, js, crypto, python, blockchain, foundry]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_tricipher_summit/
+media_subpath: /images/tryhackme_tricipher_summit/
 image:
   path: room_image.webp
 ---

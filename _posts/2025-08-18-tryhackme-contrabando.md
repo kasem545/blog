@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [linux, web, apache2, ssrf, file disclosure, request smuggling, crlf injection, command injection, rce, docker, ssti, glob, sudo, python]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_contrabando/
+media_subpath: /images/tryhackme_contrabando/
 image:
   path: room_image.webp
 ---

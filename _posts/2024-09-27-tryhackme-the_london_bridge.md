@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, ffuf, fuzz, ssrf, kernel exploit, firefox]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_the_london_bridge/
+media_subpath: /images/tryhackme_the_london_bridge/
 image:
   path: room_image.webp
 ---

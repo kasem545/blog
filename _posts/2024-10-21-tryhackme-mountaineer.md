@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, nginx, file disclosure, roundcube, vhost, wordpress, wpscan, cupp, keepass]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_mountaineer/
+media_subpath: /images/tryhackme_mountaineer/
 image:
   path: room_image.webp
 ---

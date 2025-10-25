@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [linux, web, php, xss, stored xss, javascript, csrf, insecure file upload, rce, docker, container escape, privilege escalation]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_sequence/
+media_subpath: /images/tryhackme_sequence/
 image:
   path: room_image.webp
 ---

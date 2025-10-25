@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [web, fuzz, ffuf, php, rce, suid, apparmor]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_publisher/
+media_subpath: /images/tryhackme_publisher/
 image:
   path: room_image.webp
 ---

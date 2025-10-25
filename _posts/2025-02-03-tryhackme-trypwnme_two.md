@@ -4,7 +4,7 @@ author: Kasem Shibli
 categories: [TryHackMe]
 tags: [python, ghidra, pwn, gdb, binary exploitation, shellcode, format string attack, heap, rop]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_trypwnme_two/
+media_subpath: /images/tryhackme_trypwnme_two/
 image:
   path: room_image.webp
 ---

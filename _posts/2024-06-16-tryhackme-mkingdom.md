@@ -3,7 +3,7 @@ title: 'TryHackMe: mKingdom'
 categories: [TryHackMe]
 tags: [web, fuzzing, weak credentials, concrete5, cms, rce, suid, cron, hosts]
 render_with_liquid: false
-media_subpath: /blog/images/tryhackme_mkingdom/
+media_subpath: /images/tryhackme_mkingdom/
 image:
   path: room_image.webp
 ---
