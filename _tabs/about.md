@@ -8,7 +8,7 @@ order: 4
 
 **Cybersecurity Enthusiast | Penetration Tester | Network & Web Application Security Specialist**  
 
-**Certified Ethical Hacker Master (CEH Master) | eJPT | PNPT | eWPT**
+**Certified Ethical Hacker Master (CEH Master) | eJPT | PT1 | PNPT | eWPT | eCPPT**
 
 ---
 
@@ -29,6 +29,13 @@ With certifications like **CEH Master**, **eJPT**, **PNPT**, and **eWPT**, I bri
 
 | **Certificate Name** | **Certificate Description** | **Certificate Image** |
 | -------------------- | --------------------------- | --------------------- |
+| **CRTA** | Certified Red Team Analyst  | ![CRTA](/assets/img/post_img/Certificates/CRTA.png) |
+| **DANTE Pro Lab** | Dante HackTheBox ProLab  | ![DANTE](/assets/img/post_img/Certificates/Dante.png) |
+| **P.O.O** | P.O.O HackTheBox ProLab  | ![P.O.O](/assets/img/post_img/Certificates/P.O.O.png) |
+| **MCRTA** | Multi Cloud Red Teaming Analyst | ![](/assets/img/post_img/Certificates/MCRTA.png) |
+| **PT1** | Junior Penetration Tester | ![PT1](/assets/img/post_img/Certificates/pt1.png) |
+| **eCPPT** | Certified Professional Penetration Tester | ![eCPPT](/assets/img/post_img/Certificates/ecppt.png) |
+| **MalDev** | Malware Development By MalDev | ![MalDev](/assets/img/post_img/Certificates/maldev.png) |
 | **Linux Essentials** | Certified in Linux fundamentals, essential for system administration and scripting. | ![Linux Essentials](/assets/img/post_img/Certificates/lpi.png) |
 | **Python Certified Entry-Level Programmer (PCEP)** | Certified in Python programming basics, emphasizing logic building and problem-solving. | ![PCEP](/assets/img/post_img/Certificates/pcep.png) |
 | **eLearnSecurity Junior Penetration Tester (eJPT)** | Recognized for foundational penetration testing knowledge and practical application. | ![eJPT](/assets/img/post_img/Certificates/ejpt.png) |
