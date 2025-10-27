@@ -227,3 +227,5 @@ jekyll-archives:
 
 plugins:
   - jekyll-redirect-from
+
+custom_css: /assets/css/custom.scss
