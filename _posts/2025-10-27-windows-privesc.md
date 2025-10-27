@@ -5,7 +5,7 @@ date: 2025-10-27 18:41:00 +/-TTTT
 categories: [CheetSheets]
 tags: [Windows LPE]
 ---
-
+🛠️ Under Constructions
 ## Useful Tools
 
 In the following table, some popular and useful tools for Windows local privilege escalation are presented:
@@ -149,6 +149,13 @@ $ SharpUp.exe audit TokenPrivileges
 ```powershell
 $ PrintSpoofer64.exe -i -c cmd
 ```
+##
+
+
+
+
+
+
 ## Stored Credentials (Runas)
 ### Enumeration
 ```powershell
