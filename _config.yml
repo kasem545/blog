@@ -158,7 +158,7 @@ kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: markdown
+    css_class: codehilite # default: 'highlight' # codehilite
     default_lang: console
     span:
       line_numbers: false
