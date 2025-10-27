@@ -1,0 +1,51 @@
+/* === Kasem Shibli Theme Override === */
+
+/* Main colors */
+$main-bg-color: #1f242df4 !default;
+$main-text-color: #e6e6e6 !default;
+$brand-color: #00EEFF !default;
+$link-color: $brand-color !default;
+$link-hover-color: lighten($brand-color, 10%) !default;
+
+/* Sidebar and header */
+$sidebar-bg: #1b1f27 !default;
+$sidebar-link-color: #cfcfcf !default;
+$sidebar-active-color: $brand-color !default;
+$site-title-color: $brand-color !default;
+
+/* Buttons */
+$btn-bg: transparent !default;
+$btn-color: $brand-color !default;
+$btn-border-color: $brand-color !default;
+$btn-hover-bg: $brand-color !default;
+$btn-hover-color: #0d0d0d !default;
+
+/* Code blocks */
+$code-bg: #161a20 !default;
+$code-color: #00EEFF !default;
+
+/* Syntax highlighting (Rouge / Prism) */
+$highlight-bg: #10141a !default;
+$highlight-color: #c6c6c6 !default;
+
+/* Footer and accents */
+$footer-bg: #181c23 !default;
+$footer-text-color: #aaaaaa !default;
+$border-color: rgba(255,255,255,0.08) !default;
+
+/* Light mode tweaks */
+html[data-mode="light"] {
+  --body-bg: #f9f9f9;
+  --text-color: #111;
+  --brand-color: #0094a7;
+}
+
+/* Dark mode tweaks */
+html[data-mode="dark"] {
+  --body-bg: #1f242df4;
+  --text-color: #e6e6e6;
+  --brand-color: #00EEFF;
+  --link-color: #00EEFF;
+  --sidebar-bg: #1b1f27;
+  --sidebar-active-color: #00EEFF;
+}
