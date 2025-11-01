@@ -152,6 +152,13 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
+# ------------ RSS feed ------------------
+feed:
+  path: atom.xml    # default is feed.xml
+  limit: 10         # number of posts in the feed
+  excerpt_only: true
+
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
