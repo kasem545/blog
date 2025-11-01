@@ -154,10 +154,9 @@ baseurl: ""
 
 # ------------ RSS feed ------------------
 feed:
-  path: atom.xml    # default is feed.xml
-  limit: 10         # number of posts in the feed
+  path: atom.xml # default is feed.xml
+  limit: 15 # number of posts in the feed
   excerpt_only: true
-
 
 # ------------ The following options are not recommended to be modified ------------------
 
