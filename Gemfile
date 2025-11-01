@@ -18,4 +18,3 @@ group :jekyll_plugins do
 end
 
 gem "bcrypt"
-gem "nokogiri"
