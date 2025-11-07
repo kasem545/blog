@@ -3,6 +3,9 @@ title: Windows Local Privilege Escalation
 author: Kasem Shibli
 date: 2025-10-27 18:41:00 +/-TTTT
 categories: [CheetSheets]
+media_subpath: /images/cheatsheets/
+image:
+  path: windows-privesc.webp
 tags: [Windows LPE]
 ---
 🛠️ Under Constructions
