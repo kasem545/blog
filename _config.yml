@@ -164,8 +164,8 @@ kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: markdown # default: 'highlight'
-    default_lang: powershell
+    css_class: highlight # default: 'highlight'
+    default_lang: plaintext
     span:
       line_numbers: false
     block:
